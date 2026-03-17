@@ -1,0 +1,226 @@
+.booking-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(11, 25, 44, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.booking-modal {
+    background-color: var(--bg-light);
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    border-radius: 12px;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.booking-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.booking-modal::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 4px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* Note: Since RTL, right visual goes to left logically? No, we use explicit right. We'll set it to left for RTL */
+    left: 20px;
+    right: auto;
+    background: white;
+    border: 1px solid #e2e8f0;
+    color: var(--text-gray);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.close-btn:hover {
+    background: var(--primary-navy);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.booking-header {
+    background-color: var(--primary-navy);
+    color: white;
+    padding: 40px 30px;
+    border-bottom: 4px solid var(--primary-gold);
+}
+
+.booking-header h2 {
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+.booking-header p {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+.booking-form {
+    padding: 30px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.form-section h4 {
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+/* Radio Cards */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.radio-card {
+    flex: 1;
+    min-width: 150px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+.radio-card input {
+    display: none;
+}
+
+.radio-card .icon {
+    font-size: 2rem;
+}
+
+.radio-card.active,
+.radio-card:hover {
+    border-color: var(--primary-gold);
+    background-color: rgba(197, 163, 101, 0.05);
+    color: var(--primary-navy);
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.success-state {
+    padding: 80px 30px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #10b981;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto 20px;
+    animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.success-state h2 {
+    color: var(--primary-navy);
+    margin-bottom: 15px;
+}
+
+.success-state p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-overlay {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .booking-modal {
+        max-height: 95vh;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

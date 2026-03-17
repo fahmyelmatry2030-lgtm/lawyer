@@ -1,0 +1,125 @@
+.practice-areas {
+    background-color: var(--bg-light);
+}
+
+.section-description {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.area-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.area-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--primary-navy);
+    transition: height 0.4s ease;
+    z-index: 0;
+}
+
+.area-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(11, 25, 44, 0.1);
+    border-bottom-color: var(--primary-gold);
+}
+
+.area-card:hover::before {
+    height: 100%;
+}
+
+.area-icon {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    background-color: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition-smooth);
+}
+
+.area-card:hover .area-icon {
+    transform: scale(1.1);
+}
+
+.area-title {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    color: var(--primary-navy);
+    position: relative;
+    z-index: 1;
+    transition: var(--transition-smooth);
+}
+
+.area-card:hover .area-title {
+    color: var(--primary-gold);
+}
+
+.area-description {
+    color: var(--text-gray);
+    margin-bottom: 24px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+    transition: var(--transition-smooth);
+}
+
+.area-card:hover .area-description {
+    color: #E2E8F0;
+}
+
+.area-link {
+    color: var(--primary-gold);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+    transition: var(--transition-smooth);
+}
+
+.area-card:hover .area-link {
+    color: var(--white);
+}
+
+.area-link span {
+    transition: transform 0.3s ease;
+}
+
+.area-card:hover .area-link span {
+    transform: translateX(-5px);
+    /* Arabic direction arrow move */
+}
+
+@media (max-width: 768px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+}
