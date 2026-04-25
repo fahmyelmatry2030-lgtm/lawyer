@@ -21,20 +21,57 @@
     align-items: center;
 }
 
-.logo a {
+/* ===== LOGO ===== */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-emblem {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #b8914f, #e8c87a, #b8914f);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo-link:hover .logo-emblem {
+    transform: rotate(-10deg) scale(1.05);
+    box-shadow: 0 6px 20px rgba(201, 169, 110, 0.45);
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo-name {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 1.35rem;
     font-weight: 800;
     color: var(--white);
-    letter-spacing: -0.5px;
+    letter-spacing: 0px;
+    line-height: 1;
+    display: block;
 }
 
-.navbar:not(.scrolled) .logo a {
-    color: var(--white);
-}
-
-.logo span {
-    color: var(--primary-gold);
+.logo-tagline {
+    font-size: 0.68rem;
+    color: rgba(201, 169, 110, 0.85);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    line-height: 1;
 }
 
 .nav-links {
