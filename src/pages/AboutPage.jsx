@@ -29,7 +29,7 @@ const AboutPage = () => {
     return (
         <div className="page-container">
             <div className="page-header" style={{
-                backgroundImage: 'linear-gradient(rgba(11, 25, 44, 0.8), rgba(11, 25, 44, 0.8)), url(https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80)',
+                backgroundImage: 'linear-gradient(rgba(11, 25, 44, 0.8), rgba(11, 25, 44, 0.8)), url(/lawyer.jpg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 padding: '120px 0 60px',
@@ -50,17 +50,17 @@ const AboutPage = () => {
                         <div className="reveal">
                             <h4 className="subtitle">رسالتنا ورؤيتنا</h4>
                             <h2 className="section-title">نحن هنا لحماية أعمالك وحياتك</h2>
-                            <p style={{ marginBottom: '20px', color: 'var(--text-gray)', fontSize: '1.1rem', lineHeight: '1.8' }}>
-                                في مكتبنا، نؤمن بأن المحاماة ليست مجرد تمثيل أمام القضاء، بل هي فن في التعامل مع المشكلات وتحويلها إلى فرص. تأسس المكتب بهدف تقديم نموذج مختلف في العمل القانوني، نموذج يقوم على الشفافية والصراحة التامة مع العميل.
+                             <p style={{ marginBottom: '20px', color: 'var(--text-gray)', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                                في مكتب الأستاذ أحمد عزالدين، نؤمن بأن المحاماة ليست مجرد تمثيل أمام القضاء، بل هي فن في التعامل مع المشكلات وتحويلها إلى فرص. يقود المكتب الأستاذ أحمد عزالدين، الحاصل على ماجستير القانون، بخبرة تمتد لأكثر من ١٠ سنوات في القضاء العسكري والمدني.
                             </p>
                             <p style={{ color: 'var(--text-gray)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '30px' }}>
-                                رسالتنا هي تقديم أفضل الخدمات والاستشارات القانونية بمهنية عالية وشفافية مطلقة، لضمان حماية حقوق عملائنا ومصالحهم سواء كانوا أفراداً أو كيانات تجارية. رؤيتنا أن نكون الوجهة القانونية الأولى والموثوقة على مستوى المنطقة.
+                                رسالتنا هي تقديم أفضل الخدمات والاستشارات القانونية بمهنية عالية وشفافية مطلقة، لضمان حماية حقوق عملائنا ومصالحهم. رؤيتنا أن نكون الوجهة القانونية الأولى والموثوقة من خلال الجمع بين الخبرة الأكاديمية العميقة والممارسة العملية المتميزة.
                             </p>
                         </div>
                         <div className="reveal" style={{ transitionDelay: '0.2s' }}>
                             <img
-                                src="https://images.unsplash.com/photo-1505664159858-62024227303e?auto=format&fit=crop&q=80"
-                                alt="Law firm meeting"
+                                src="/lawyer.jpg"
+                                alt="الأستاذ أحمد عزالدين"
                                 className="about-page-img"
                             />
                         </div>
@@ -98,31 +98,31 @@ const AboutPage = () => {
 
                     <div className="timeline">
                         <div className="timeline-item reveal">
-                            <div className="tl-year">2005</div>
+                            <div className="tl-year">2014</div>
                             <div className="tl-content">
-                                <h3>تأسيس المكتب</h3>
-                                <p>بدأنا بفرع صغير ورؤية واضحة لتقديم الدعم القانوني للأفراد في القضايا المدنية.</p>
+                                <h3>بداية المسيرة المهنية</h3>
+                                <p>بدأ الأستاذ أحمد عزالدين مسيرته القانونية بالتركيز على قضايا القضاء العسكري والمدني.</p>
                             </div>
                         </div>
                         <div className="timeline-item reveal" style={{ transitionDelay: '0.1s' }}>
-                            <div className="tl-year">2012</div>
+                            <div className="tl-year">2018</div>
                             <div className="tl-content">
-                                <h3>التوسع في قانون الشركات</h3>
-                                <p>تم افتتاح قسم خاص بالشركات والتجارة لتلبية متطلبات السوق المتزايدة لدعم الأعمال.</p>
+                                <h3>الحصول على الماجستير</h3>
+                                <p>تعزيز الخبرة العملية بالدراسة الأكاديمية والحصول على درجة الماجستير في القانون.</p>
                             </div>
                         </div>
                         <div className="timeline-item reveal" style={{ transitionDelay: '0.2s' }}>
-                            <div className="tl-year">2018</div>
+                            <div className="tl-year">2021</div>
                             <div className="tl-content">
-                                <h3>تصنيف ممتاز</h3>
-                                <p>حصل المكتب على جوائز وتصنيفات متقدمة بفضل نسبة النجاح العالية في القضايا الكبرى.</p>
+                                <h3>تأسيس المكتب الخاص</h3>
+                                <p>إطلاق المكتب بفرعيه في 6 أكتوبر والإسكندرية لتقديم خدمات قانونية متكاملة.</p>
                             </div>
                         </div>
                         <div className="timeline-item reveal" style={{ transitionDelay: '0.3s' }}>
-                            <div className="tl-year">2023</div>
+                            <div className="tl-year">2024</div>
                             <div className="tl-content">
-                                <h3>التحول الرقمي الشامل</h3>
-                                <p>إطلاق البوابة الإلكترونية وتطوير أنظمة حماية البيانات وسرية العملاء تقنياً.</p>
+                                <h3>الريادة الرقمية</h3>
+                                <p>تطوير الخدمات القانونية الرقمية والتوسع في تقديم الاستشارات للأفراد والشركات.</p>
                             </div>
                         </div>
                     </div>
