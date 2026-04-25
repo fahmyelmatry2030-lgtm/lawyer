@@ -19,7 +19,6 @@ const ContactSection = () => {
                             <div className="method-item">
                                 <div className="method-icon">📍</div>
                                 <div>
-<<<<<<< HEAD
                                     <h5>مدينة 6 أكتوبر</h5>
                                     <p>الحي الأول، المجاورة الثانية، شارع معهد الفنون التطبيقية، عمارة 266</p>
                                 </div>
@@ -29,33 +28,20 @@ const ContactSection = () => {
                                 <div>
                                     <h5>الإسكندرية</h5>
                                     <p>شارع شامبليون، الأزاريطة (أمام كلية الطب مباشرة)</p>
-=======
-                                    <h5>العنوان الرئيسي</h5>
-                                    <p>123 شارع العدالة، مدينة الرياض، المملكة العربية السعودية</p>
->>>>>>> 0a61a76403f59325c0669a1dd9469b85b179f3da
                                 </div>
                             </div>
                             <div className="method-item">
                                 <div className="method-icon">📞</div>
                                 <div>
-<<<<<<< HEAD
                                     <h5>هاتف التواصل وواتساب</h5>
                                     <p dir="ltr">+20 1012177070</p>
-=======
-                                    <h5>هاتف التواصل</h5>
-                                    <p>+966 50 123 4567<br />+966 11 234 5678</p>
->>>>>>> 0a61a76403f59325c0669a1dd9469b85b179f3da
                                 </div>
                             </div>
                             <div className="method-item">
                                 <div className="method-icon">📧</div>
                                 <div>
                                     <h5>البريد الإلكتروني</h5>
-<<<<<<< HEAD
                                     <p>mr.ahmedali.lawyeroffice@gmail.com</p>
-=======
-                                    <p>info@almohami.com</p>
->>>>>>> 0a61a76403f59325c0669a1dd9469b85b179f3da
                                 </div>
                             </div>
                         </div>
