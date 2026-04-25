@@ -1,0 +1,143 @@
+.about-section {
+    background-color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    right: 20px;
+    bottom: 0px;
+    border: 2px solid var(--primary-gold);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: 24px;
+    border-radius: 8px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(11, 25, 44, 0.3);
+    transform: translateX(-30%);
+}
+
+.experience-badge .years {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-gold);
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.subtitle {
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.about-content .section-title::after {
+    left: auto;
+    right: 0;
+    transform: none;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: var(--primary-navy);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+.core-values {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.value-icon {
+    font-size: 2rem;
+    background-color: rgba(197, 163, 101, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.value-text h5 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.value-text p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-badge {
+        transform: translateX(0);
+        left: 20px;
+    }
+}

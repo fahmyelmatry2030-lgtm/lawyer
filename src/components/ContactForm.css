@@ -1,0 +1,23 @@
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: var(--transition-smooth);
+    background-color: var(--bg-light);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 3px rgba(197, 163, 101, 0.2);
+    background-color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
