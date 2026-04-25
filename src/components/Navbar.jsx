@@ -28,7 +28,11 @@ const Navbar = () => {
         <nav className={`navbar ${shouldBeSolid ? 'scrolled' : ''}`}>
             <div className="container nav-content">
                 <div className="logo">
+<<<<<<< HEAD
                     <Link to="/">أحمد عزالدين<span>.</span></Link>
+=======
+                    <Link to="/">المحامي<span>.</span></Link>
+>>>>>>> 0a61a76403f59325c0669a1dd9469b85b179f3da
                 </div>
 
                 <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
