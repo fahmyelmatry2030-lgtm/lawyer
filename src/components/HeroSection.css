@@ -3,7 +3,11 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #0b192c; /* Deep Dark Blue */
+    background-color: #0b192c;
+    background-image: linear-gradient(rgba(11, 25, 44, 0.85), rgba(11, 25, 44, 0.85)), url('/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--white);
     overflow: hidden;
     padding: 120px 0 80px;
