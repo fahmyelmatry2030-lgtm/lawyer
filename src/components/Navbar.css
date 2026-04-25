@@ -30,7 +30,7 @@
 }
 
 .navbar:not(.scrolled) .logo a {
-    color: var(--primary-navy);
+    color: var(--white);
 }
 
 .logo span {
@@ -52,7 +52,7 @@
 }
 
 .navbar:not(.scrolled) .nav-links a:not(.btn-nav) {
-    color: var(--text-dark);
+    color: var(--white);
 }
 
 .nav-links a:not(.btn-nav)::after {
@@ -151,7 +151,7 @@
 }
 
 .navbar:not(.scrolled) .mobile-toggle .bar {
-    background-color: var(--primary-navy);
+    background-color: var(--white);
 }
 
 .mobile-toggle .bar.open:nth-child(1) {
