@@ -4,8 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #050a14; /* Even Darker Blue/Black */
-    background-image: linear-gradient(rgba(5, 10, 20, 0.7), rgba(5, 10, 20, 0.9)), url('/hero-bg.png');
+    background-color: #02060e;
+    background-image: 
+        radial-gradient(circle at center, rgba(2, 6, 14, 0.4) 0%, rgba(2, 6, 14, 0.9) 100%),
+        url('/hero-bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
