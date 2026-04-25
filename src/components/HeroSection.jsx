@@ -5,17 +5,27 @@ const HeroSection = () => {
     return (
         <section className="hero" id="home">
             <div className="container hero-container-centered">
-                <div className="hero-content-centered reveal">
+                <div className="hero-content-centered">
+
                     <div className="hero-badge">مكتب الأستاذ أحمد عزالدين للمحاماة</div>
+
                     <h1 className="hero-title-main">
-                        ريادة قانونية <br />
+                        ريادة قانونية
                         <span>في قلب العدالة</span>
                     </h1>
+
+                    <div className="hero-divider">
+                        <span></span>
+                        <i>⚖</i>
+                        <span></span>
+                    </div>
+
                     <p className="hero-subtitle-main">
-                        ماجستير القانون وخبرة ١٠ سنوات في القضاء العسكري والمدني. <br />
-                        نحن لا نمثل عملائنا فحسب، بل نحمي حقوقهم برؤية قانونية ثاقبة.
+                        ماجستير القانون · خبرة ١٠ سنوات في القضاء العسكري والمدني
+                        <br />
+                        نحمي حقوقك بدفاع صلب واستشارة قانونية دقيقة
                     </p>
-                    
+
                     <div className="hero-actions-centered">
                         <a href="#contact" className="btn-primary-gold">احجز استشارتك الآن</a>
                         <a href="#practice-areas" className="btn-outline-gold">مجالات التخصص</a>
@@ -37,9 +47,10 @@ const HeroSection = () => {
                             <p>قضية رابحة</p>
                         </div>
                     </div>
+
                 </div>
             </div>
-            
+
             <div className="hero-scroll-indicator">
                 <div className="mouse"></div>
                 <p>اكتشف المزيد</p>
