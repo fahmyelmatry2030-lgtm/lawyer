@@ -2,6 +2,10 @@ import React from 'react';
 import './HeroSection.css';
 
 const HeroSection = () => {
+    const openBooking = () => {
+        window.dispatchEvent(new CustomEvent('openBookingModal'));
+    };
+
     return (
         <section className="hero" id="home">
             <div className="container hero-container-centered">
@@ -26,9 +30,9 @@ const HeroSection = () => {
                     </p>
 
                     <div className="hero-actions-centered">
-                        <a href="#contact" className="btn-primary-gold">
+                        <button onClick={openBooking} className="btn-primary-gold">
                             🔒 استشارة مجانية الآن
-                        </a>
+                        </button>
                         <a href="#practice-areas" className="btn-outline-gold">
                             تعرف على تخصصاتنا
                         </a>

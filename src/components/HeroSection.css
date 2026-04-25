@@ -162,10 +162,13 @@
     font-weight: 800;
     font-size: 1.05rem;
     transition: all 0.4s ease;
-    box-shadow: 0 8px 30px rgba(201, 169, 110, 0.3), 0 0 0 0 rgba(201, 169, 110, 0);
+    box-shadow: 0 8px 30px rgba(201, 169, 110, 0.3);
     letter-spacing: 0.5px;
     text-decoration: none;
     display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .btn-primary-gold:hover {

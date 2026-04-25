@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import ContactForm from '../components/ContactForm';
 
 const ContactPage = () => {
     useEffect(() => {
@@ -16,6 +15,10 @@ const ContactPage = () => {
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         return () => observer.disconnect();
     }, []);
+
+    const openBooking = () => {
+        window.dispatchEvent(new CustomEvent('openBookingModal'));
+    };
 
     return (
         <div className="page-container">
@@ -37,50 +40,86 @@ const ContactPage = () => {
             <section className="section-padding bg-light">
                 <div className="container">
 
-                    {/* Quick Info Cards */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginBottom: '60px' }}>
+                    {/* Info Cards */}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '30px', marginBottom: '60px' }}>
+
                         <div className="reveal contact-info-card" style={{ backgroundColor: 'var(--white)', padding: '40px', borderRadius: '8px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', borderBottom: '3px solid var(--primary-gold)' }}>
-                            <div style={{ fontSize: '2.5rem', color: 'var(--primary-navy)', marginBottom: '20px' }}>🕒</div>
-                            <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-navy)', marginBottom: '10px' }}>ساعات العمل</h3>
-                            <p style={{ color: 'var(--text-gray)' }}>الأحد - الخميس: 9:00 صباحاً - 5:00 مساءً</p>
-                            <p style={{ color: 'var(--text-gray)' }}>الجمعة والسبت: مغلق</p>
+                            <div style={{ fontSize: '2.5rem', marginBottom: '20px' }}>📍</div>
+                            <h3 style={{ fontSize: '1.2rem', color: 'var(--primary-navy)', marginBottom: '10px' }}>مدينة 6 أكتوبر</h3>
+                            <p style={{ color: 'var(--text-gray)', lineHeight: '1.7' }}>الحي الأول، المجاورة الثانية<br />شارع معهد الفنون التطبيقية، عمارة 266</p>
                         </div>
 
                         <div className="reveal contact-info-card" style={{ transitionDelay: '0.1s', backgroundColor: 'var(--white)', padding: '40px', borderRadius: '8px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', borderBottom: '3px solid var(--primary-gold)' }}>
-                            <div style={{ fontSize: '2.5rem', color: 'var(--primary-navy)', marginBottom: '20px' }}>📞</div>
-                            <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-navy)', marginBottom: '10px' }}>التواصل المباشر</h3>
-                            <p style={{ color: 'var(--text-gray)' }} dir="ltr">+966 50 123 4567</p>
-                            <p style={{ color: 'var(--text-gray)' }}>info@lawfirm.com</p>
+                            <div style={{ fontSize: '2.5rem', marginBottom: '20px' }}>📍</div>
+                            <h3 style={{ fontSize: '1.2rem', color: 'var(--primary-navy)', marginBottom: '10px' }}>الإسكندرية</h3>
+                            <p style={{ color: 'var(--text-gray)', lineHeight: '1.7' }}>شارع شامبليون، الأزاريطة<br />(أمام كلية الطب مباشرة)</p>
                         </div>
 
-                        <div className="reveal contact-info-card" style={{ transitionDelay: '0.2s', backgroundColor: 'var(--white)', padding: '40px', borderRadius: '8px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', borderBottom: '3px solid #dc2626' }}>
-                            <div style={{ fontSize: '2.5rem', color: '#dc2626', marginBottom: '20px' }}>🚨</div>
-                            <h3 style={{ fontSize: '1.3rem', color: '#dc2626', marginBottom: '10px' }}>حالات الطوارئ الموقوفين</h3>
+                        <div className="reveal contact-info-card" style={{ transitionDelay: '0.2s', backgroundColor: 'var(--white)', padding: '40px', borderRadius: '8px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', borderBottom: '3px solid var(--primary-gold)' }}>
+                            <div style={{ fontSize: '2.5rem', marginBottom: '20px' }}>📞</div>
+                            <h3 style={{ fontSize: '1.2rem', color: 'var(--primary-navy)', marginBottom: '10px' }}>هاتف وواتساب</h3>
+                            <p style={{ color: 'var(--text-gray)' }} dir="ltr">+20 1012177070</p>
+                            <p style={{ color: 'var(--text-gray)', marginTop: '6px' }}>mr.ahmedali.lawyeroffice@gmail.com</p>
+                        </div>
+
+                        <div className="reveal contact-info-card" style={{ transitionDelay: '0.3s', backgroundColor: 'var(--white)', padding: '40px', borderRadius: '8px', textAlign: 'center', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', borderBottom: '3px solid #dc2626' }}>
+                            <div style={{ fontSize: '2.5rem', marginBottom: '20px' }}>🚨</div>
+                            <h3 style={{ fontSize: '1.2rem', color: '#dc2626', marginBottom: '10px' }}>حالات الطوارئ - الموقوفون</h3>
                             <p style={{ color: 'var(--text-gray)' }}>للحالات الجنائية العاجلة على مدار 24 ساعة</p>
-                            <p style={{ color: 'var(--text-gray)', fontWeight: 'bold' }} dir="ltr">+966 50 999 0000</p>
+                            <p style={{ color: '#dc2626', fontWeight: 'bold', marginTop: '6px' }} dir="ltr">+20 1012177070</p>
                         </div>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '40px', alignItems: 'start' }}>
-                        <div className="reveal" style={{ backgroundColor: 'white', padding: '40px', borderRadius: '12px', boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }}>
-                            <h3 style={{ fontSize: '1.8rem', color: 'var(--primary-navy)', marginBottom: '10px' }}>دعنا نسمع منك</h3>
-                            <p style={{ color: 'var(--text-gray)', marginBottom: '30px' }}>قم بتعبئة النموذج التالي وسيقوم أحد ممثلينا بالتواصل معك في أقرب وقت لترتيب موعد الاستشارة.</p>
-                            <ContactForm />
-                        </div>
-
-                        <div className="reveal" style={{ height: '100%', minHeight: '500px', backgroundColor: '#e5e7eb', borderRadius: '12px', overflow: 'hidden', position: 'relative' }}>
-                            {/* Larger map view */}
-                            <div style={{ position: 'absolute', inset: '0', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6b7280', fontSize: '1.5rem', background: 'url(https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80) center/cover', opacity: '0.6' }}>
-
-                            </div>
-                            <div style={{ position: 'absolute', inset: '0', backgroundColor: 'rgba(11, 25, 44, 0.7)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center', padding: '40px' }}>
-                                <i className="fas fa-map-marker-alt" style={{ fontSize: '3rem', color: 'var(--primary-gold)', marginBottom: '20px' }}></i>
-                                <h3 style={{ fontSize: '1.8rem', marginBottom: '10px' }}>المقر الرئيسي</h3>
-                                <p style={{ fontSize: '1.1rem', lineHeight: '1.8', maxWidth: '300px' }}>برج الأعمال، الدور الخامس<br />طريق الملك فهد، العليا<br />الرياض، المملكة العربية السعودية</p>
-                                <a href="#" className="btn-primary" style={{ marginTop: '20px', backgroundColor: 'transparent', border: '2px solid var(--primary-gold)', color: 'var(--primary-gold)' }}>احصل على الاتجاهات</a>
-                            </div>
+                    {/* CTA Booking */}
+                    <div className="reveal" style={{
+                        background: 'linear-gradient(135deg, var(--primary-navy) 0%, #152a4a 100%)',
+                        borderRadius: '16px',
+                        padding: '60px 40px',
+                        textAlign: 'center',
+                        border: '1px solid rgba(201,169,110,0.2)'
+                    }}>
+                        <div style={{ fontSize: '3rem', marginBottom: '20px' }}>⚖️</div>
+                        <h2 style={{ fontSize: '2.2rem', color: 'var(--primary-gold)', marginBottom: '16px' }}>احجز استشارتك القانونية</h2>
+                        <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.75)', maxWidth: '580px', margin: '0 auto 36px', lineHeight: '1.8' }}>
+                            لا تتردد في التواصل معنا — الاستشارة الأولى مجانية وسيتم الرد عليك في أسرع وقت ممكن من قِبَل الأستاذ أحمد عزالدين شخصياً.
+                        </p>
+                        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                            <button
+                                onClick={openBooking}
+                                style={{
+                                    background: 'linear-gradient(135deg, #b8914f, #e8c87a)',
+                                    color: '#0a0800',
+                                    padding: '16px 44px',
+                                    borderRadius: '6px',
+                                    border: 'none',
+                                    fontWeight: '800',
+                                    fontSize: '1.1rem',
+                                    cursor: 'pointer',
+                                    fontFamily: 'inherit'
+                                }}
+                            >
+                                🔒 احجز موعدك الآن
+                            </button>
+                            <a
+                                href={`https://wa.me/201012177070`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    background: '#25D366',
+                                    color: 'white',
+                                    padding: '16px 44px',
+                                    borderRadius: '6px',
+                                    fontWeight: '800',
+                                    fontSize: '1.1rem',
+                                    textDecoration: 'none',
+                                    display: 'inline-block'
+                                }}
+                            >
+                                💬 واتساب مباشر
+                            </a>
                         </div>
                     </div>
+
                 </div>
             </section>
         </div>
