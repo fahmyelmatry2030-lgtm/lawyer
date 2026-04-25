@@ -7,11 +7,11 @@ const HeroSection = () => {
             <div className="container hero-container-centered">
                 <div className="hero-content-centered">
 
-                    <div className="hero-badge">مكتب الأستاذ أحمد عزالدين للمحاماة</div>
+                    <div className="hero-badge">أحمد عزالدين · ماجستير القانون · ١٠+ سنوات خبرة</div>
 
                     <h1 className="hero-title-main">
-                        ريادة قانونية
-                        <span>في قلب العدالة</span>
+                        حقك لا يُضيَّع
+                        <span>ما دمنا معك</span>
                     </h1>
 
                     <div className="hero-divider">
@@ -21,14 +21,17 @@ const HeroSection = () => {
                     </div>
 
                     <p className="hero-subtitle-main">
-                        ماجستير القانون · خبرة ١٠ سنوات في القضاء العسكري والمدني
-                        <br />
-                        نحمي حقوقك بدفاع صلب واستشارة قانونية دقيقة
+                        سواء كانت قضيتك جنائية، عسكرية، تجارية أو أسرية —<br />
+                        نقف بجانبك بدفاع قانوني صلب لا تنازل فيه حتى تُستعاد حقوقك كاملة.
                     </p>
 
                     <div className="hero-actions-centered">
-                        <a href="#contact" className="btn-primary-gold">احجز استشارتك الآن</a>
-                        <a href="#practice-areas" className="btn-outline-gold">مجالات التخصص</a>
+                        <a href="#contact" className="btn-primary-gold">
+                            🔒 استشارة مجانية الآن
+                        </a>
+                        <a href="#practice-areas" className="btn-outline-gold">
+                            تعرف على تخصصاتنا
+                        </a>
                     </div>
 
                     <div className="hero-stats-centered">
@@ -45,6 +48,11 @@ const HeroSection = () => {
                         <div className="stat-item">
                             <h3>+٥٠٠</h3>
                             <p>قضية رابحة</p>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <h3>٢٤/٧</h3>
+                            <p>متاح للتواصل</p>
                         </div>
                     </div>
 
